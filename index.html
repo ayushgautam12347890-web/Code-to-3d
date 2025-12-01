@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Code to 3D Video Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🧱 Code to 3D Video Generator</h1>
+        <p class="subtitle">100% Free - No API Keys Needed - Runs in Your Browser</p>
+        
+        <div class="editor-container">
+            <div class="language-selector">
+                <select id="language">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="html">HTML/CSS</option>
+                </select>
+            </div>
+            
+            <textarea id="codeInput" placeholder="// Paste your code here...
+// Example Python code:
+def hello():
+    print('Hello 3D World')
+    
+class Program:
+    def run(self):
+        return 'Executing...'">
+function hello() {
+    console.log("JavaScript code");
+    return 42;
+}</textarea>
+            
+            <div class="controls">
+                <button id="generateBtn" onclick="generate3D()">🎬 Generate 3D Visualization</button>
+                <button id="recordBtn" onclick="startRecording()" disabled>⏺️ Record Video</button>
+                <button id="downloadBtn" onclick="downloadVideo()" disabled>📥 Download Video</button>
+            </div>
+        </div>
+        
+        <div class="output-container">
+            <div class="viewer">
+                <canvas id="threeCanvas"></canvas>
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Building 3D visualization...</p>
+                </div>
+            </div>
+            
+            <div class="video-output">
+                <video id="outputVideo" controls class="hidden"></video>
+                <div id="videoInfo"></div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>✨ How it works:</h3>
+            <ul>
+                <li>✅ 100% Free - No API keys or payments</li>
+                <li>✅ Runs entirely in your browser</li>
+                <li>✅ No data sent to servers - Your code stays private</li>
+                <li>✅ Records video directly from 3D visualization</li>
+                <li>✅ Supports multiple programming languages</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="code-parser.js"></script>
+    <script src="three-app.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
